@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.Toolkit;
@@ -52,14 +51,13 @@ public class GUI extends JFrame {
         clientHeight = (int)(screenDimension.getHeight()-insets.top-insets.bottom); 
         setPreferredSize(new Dimension(clientWidth,clientHeight));
         
-    	MapPanel mapPanel = new MapPanel("baseline\region_belfort_routes_fleuves_habitats.gif", 10);
+   
         //instantiate GUI
         this.pack();
         this.setTitle("Path Finder");
 		this.setLocation(insets.left, insets.top);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.getContentPane().add(mapPanel ,BorderLayout.CENTER);
     	this.setVisible(true);
 		
 		//add MapPanel
